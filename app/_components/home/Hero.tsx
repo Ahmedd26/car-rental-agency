@@ -11,6 +11,7 @@ export default function Hero() {
         <Image
           src={bgImage1}
           fill
+          quality={100}
           alt="background image"
           className="-z-40 w-full object-cover"
         />
@@ -41,6 +42,7 @@ export default function Hero() {
         <Image
           src={bgImage2}
           fill
+          quality={100}
           alt="background image"
           className="-z-40 w-full object-cover"
         />
