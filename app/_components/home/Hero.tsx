@@ -1,13 +1,13 @@
-import Image from "next/image";
 import bgImage1 from "@/public/assets/hero/Ads-1-bg.png";
-import bgImage2 from "@/public/assets/hero/Ads-2-bg.png";
 import car1 from "@/public/assets/hero/Ads-1-car.png";
-import Link from "next/link";
+import bgImage2 from "@/public/assets/hero/Ads-2-bg.png";
 import car2 from "@/public/assets/hero/Ads-2-car.png";
+import Image from "next/image";
+import Link from "next/link";
 export default function Hero() {
   return (
     <header className="grid w-full grid-cols-1 gap-8 px-6 md:grid-cols-2 md:px-16">
-      <div className="relative flex aspect-video w-full flex-col overflow-hidden rounded-md p-4 md:p-6">
+      <div className="relative flex w-full flex-col overflow-hidden rounded-md p-4 md:p-6">
         <Image
           src={bgImage1}
           fill
@@ -38,7 +38,7 @@ export default function Hero() {
           className="relative bottom-3 left-1/2 mt-auto -translate-x-1/2"
         />
       </div>
-      <div className="relative flex aspect-video w-full flex-col overflow-hidden rounded-md p-4 md:p-6">
+      <div className="relative hidden w-full flex-col overflow-hidden rounded-md p-4 md:flex md:p-6">
         <Image
           src={bgImage2}
           fill
