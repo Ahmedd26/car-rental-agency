@@ -1,5 +1,6 @@
 import Hero from "@/app/_components/home/Hero";
 import Filter from "@/app/_components/Filter/Filter";
+import CarGrid from "@/app/_components/CarGrid";
 
 export default function Home() {
   return (
@@ -7,6 +8,9 @@ export default function Home() {
       <Hero />
       <div className="my-8 px-6 lg:px-16">
         <Filter />
+      </div>
+      <div className="my-8 px-6 lg:px-16">
+        <CarGrid />
       </div>
     </main>
   );
