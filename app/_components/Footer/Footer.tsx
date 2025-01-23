@@ -22,7 +22,7 @@ const communityList: TLinks[] = [
 ];
 export default function Footer() {
   return (
-    <footer className="px-6 md:bg-white md:px-16 md:py-20">
+    <footer className="px-6 md:bg-white md:px-16 md:py-20 md:shadow-[10px_4px_14px_rgba(0,0,0,0.04)]">
       <div className="flex flex-col justify-between md:flex-row">
         <div className="mb-12 flex flex-col md:flex-1">
           <Logo />
