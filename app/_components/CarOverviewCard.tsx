@@ -7,7 +7,7 @@ import {
 } from "@/app/_components/Icons";
 import Link from "next/link";
 import LikeButton from "./LikeButton";
-export default function Card() {
+export default function CarOverviewCard() {
   return (
     <div className="rounded-md bg-white p-6 shadow">
       {/* Header */}
@@ -24,9 +24,10 @@ export default function Card() {
           <Image
             src={car}
             alt="car"
-            fill
-            className="object-scale-down object-bottom"
+            // fill
+            className="absolute h-full w-full object-contain object-bottom"
           />
+          {/* className="object-contain object-bottom" */}
           <div className="absolute inset-0 shadow-[inset_0px_-36px_24px_-24px_rgba(255,255,255)]">
             {/* image shadow effect */}
           </div>
