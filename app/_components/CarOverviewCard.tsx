@@ -5,19 +5,14 @@ import {
   PersonsIcon,
   SteeringIcon,
 } from "@/app/_components/Icons";
-import Link from "next/link";
-import LikeButton from "./LikeButton";
+import CardHeader from "./CardHeader";
+import CardFooter from "./CardFooter";
+// import LikeButton from "./LikeButton";
 export default function CarOverviewCard() {
   return (
     <div className="rounded-md bg-white p-6 shadow">
       {/* Header */}
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex flex-col">
-          <h3 className="text-xl font-bold">CR - V</h3>
-          <h4 className="text-sm font-bold text-secondary-300">SUV</h4>
-        </div>
-        <LikeButton />
-      </div>
+      <CardHeader title="CR - V" subtitle="SUV" />
       {/* Body */}
       <div className="flex items-center gap-5 md:flex-col md:gap-8">
         <div className="relative aspect-video w-full flex-1">
@@ -52,28 +47,7 @@ export default function CarOverviewCard() {
         </div>
       </div>
       {/* Footer */}
-      <div className="mt-9 flex flex-wrap items-center justify-between gap-4 md:mt-6">
-        <div className="flex flex-col">
-          <span className="text-xl font-bold text-secondary-500">
-            $80.00/
-            <span className="ms-0.5 text-sm font-normal text-secondary-300">
-              day
-            </span>
-          </span>
-          {/* Discount, OPTIONAL */}
-          <span className="text-sm font-bold text-secondary-300 line-through">
-            $100.00
-          </span>
-        </div>
-        <Link
-          href="/cars"
-          className="rounded-sm bg-primary-500 px-4 py-2.5 text-xs font-semibold text-white sm:text-sm md:px-5 md:text-base"
-        >
-          Rent Now
-        </Link>
-      </div>
-
-      {/* Footer: Price + CTA */}
+      <CardFooter price={80} discountPercentage={5} linkHref="/cars" />
     </div>
   );
 }
