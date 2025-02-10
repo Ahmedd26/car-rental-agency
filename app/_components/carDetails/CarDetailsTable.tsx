@@ -1,26 +1,31 @@
+import { ICar } from "@/types/CarInterface";
 import { TailwindClass } from "@/types/tailwind";
 import React, { ReactNode } from "react";
 
 interface Props {
   className?: TailwindClass;
+  car: ICar;
 }
-export default function CarDetailsTable({ className }: Props) {
+export default function CarDetailsTable({ car, className }: Props) {
+  const { category, capacity, transmission, fuelType, fuelCapacity } = car;
   return (
     <table className={`${className ?? ""} w-full border-collapse`}>
       <tbody className="">
         {/* Row 1 */}
         <tr>
           <TableHead>Car type</TableHead>
-          <TableData>Sport</TableData>
+          <TableData>{category}</TableData>
           <TableHead>Capacity</TableHead>
-          <TableData>2 people</TableData>
+          <TableData>
+            {`${capacity} ${capacity > 1 ? "person" : "people"}`}
+          </TableData>
         </tr>
         {/* Row 2 */}
         <tr>
           <TableHead>Transmission</TableHead>
-          <TableData>Manual</TableData>
-          <TableHead>Gasoline</TableHead>
-          <TableData>70L</TableData>
+          <TableData>{transmission}</TableData>
+          <TableHead>{fuelType}</TableHead>
+          <TableData>{`${fuelCapacity} ${fuelType === "Gasoline" ? "L" : "W"}`}</TableData>
         </tr>
       </tbody>
     </table>

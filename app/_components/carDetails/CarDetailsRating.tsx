@@ -21,7 +21,10 @@ function CarDetailsRating({ rating, ratingCount, className }: Props) {
         className="md:text-base lg:text-lg"
       />
       <span className="text-xs font-medium text-secondary-300 md:text-sm lg:text-base">
-        {formatNumber(ratingCount)} Reviewer
+        {/* {formatNumber(ratingCount)} Reviewer */}
+        {ratingCount > 1
+          ? `${formatNumber(ratingCount)} Reviewers`
+          : "No reviews"}
       </span>
     </div>
   );
