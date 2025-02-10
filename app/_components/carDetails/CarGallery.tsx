@@ -33,7 +33,7 @@ export default function CarGallery({ images, className }: Props) {
           <picture
             onClick={() => handleImageClick(images.indexOf(image))}
             key={image}
-            className={`relative aspect-video w-20 cursor-pointer select-none overflow-hidden rounded-[10px] bg-indigo-400 transition-all duration-150 ease-in-out sm:w-28 md:aspect-square md:w-36 ${
+            className={`relative aspect-video w-20 cursor-pointer select-none overflow-hidden rounded-[10px] bg-secondary-500/35 transition-all duration-150 ease-in-out sm:w-28 md:aspect-square md:w-36 ${
               activeImage === images.indexOf(image)
                 ? "scale-90 ring-2 ring-primary-500 ring-offset-4 md:ring-4 md:ring-offset-8"
                 : ""
